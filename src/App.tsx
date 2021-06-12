@@ -1,15 +1,13 @@
 import React from 'react'
 import './App.css'
-import { useHeroes } from './utils/useHeroes'
+import HeroesList from './components/HeroesList/HeroesList'
 
 function App(): React.ReactElement {
-  const heroes = useHeroes()
-
-  // useEffect(() => {
-  //   console.log('heroes changed', heroes)
-  // }, [heroes])
-
-  return <div className="App">{heroes.length}</div>
+  return (
+    <div className="App">
+      <HeroesList />
+    </div>
+  )
 }
 
 export default App

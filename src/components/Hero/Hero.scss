@@ -1,0 +1,40 @@
+.Hero {
+  list-style: none;
+  position: relative;
+  margin: 1rem;
+
+  img {
+    height: 144px;
+    width: 256px;
+  }
+
+  h2 {
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    padding-left: 33px;
+
+    &::before {
+      content: '';
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      left: 0;
+    }
+
+    &.strength::before {
+      background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png');
+      background-size: cover;
+    }
+
+    &.agility::before {
+      background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png');
+      background-size: cover;
+    }
+
+    &.intelligence::before {
+      background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png');
+      background-size: cover;
+    }
+  }
+}

@@ -14,20 +14,22 @@ const HeroesList = ({ filters }: Props): React.ReactElement => {
     let filteredHeroes = heroes
 
     if (filters.attribute) {
-      filteredHeroes = heroes.filter(
+      filteredHeroes = filteredHeroes.filter(
         (hero) => hero.attribute === filters.attribute,
       )
     }
+
     if (filters.complexity) {
-      filteredHeroes = heroes.filter(
+      filteredHeroes = filteredHeroes.filter(
         (hero) => hero.complexity === filters.complexity,
       )
     }
+
     // if has roles filter
     const rolesFilter = Object.values(filters.roles)
     if (rolesFilter.filter((r) => r >= 1).length) {
       // for each hero
-      filteredHeroes = heroes.filter((hero) => {
+      filteredHeroes = filteredHeroes.filter((hero) => {
         // convert the roles to an array
         const heroRoles = Object.values(hero.roles)
         // for each role value

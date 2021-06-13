@@ -13,7 +13,7 @@ const Hero = ({ hero }: Props): React.ReactElement => {
       <div className="hero-label">
         <img
           className="attr"
-          src={`https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_${hero.primaryAttribute}.png`}
+          src={`https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_${hero.attribute}.png`}
         />
         <h2>{hero.name}</h2>
       </div>

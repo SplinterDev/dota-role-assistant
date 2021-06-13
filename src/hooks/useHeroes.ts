@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import allHeroes from '../data/allHeroes.json'
 
-type PrimaryAttribute = 'strength' | 'agility' | 'intelligence'
+export type Attribute = 'strength' | 'agility' | 'intelligence'
 type Roles = {
   Carry: number
   Support: number
@@ -18,7 +18,7 @@ export type Hero = {
   id: number
   name: string
   image: string
-  primaryAttribute: PrimaryAttribute
+  attribute: Attribute
   complexity: number
   roles: Roles
 }
@@ -26,7 +26,7 @@ export type Hero = {
 const IMAGE_URL =
   'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/'
 
-const getPrimaryAttribute = (attrNum: number): PrimaryAttribute => {
+const getAttribute = (attrNum: number): Attribute => {
   if (attrNum === 0) return 'strength'
   if (attrNum === 1) return 'agility'
   return 'intelligence'
@@ -52,7 +52,7 @@ const getHero = async (name: string): Promise<Hero> => {
     id: heroData.id,
     name: heroData.name_loc,
     image: `${IMAGE_URL}${heroData.name.slice(14)}.png`,
-    primaryAttribute: getPrimaryAttribute(heroData.primary_attr),
+    attribute: getAttribute(heroData.primary_attr),
     complexity: heroData.complexity,
     roles: getRoles(heroData.role_levels),
   }

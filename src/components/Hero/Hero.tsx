@@ -9,8 +9,14 @@ type Props = {
 const Hero = ({ hero }: Props): React.ReactElement => {
   return (
     <li className="Hero">
-      <img src={hero.image} />
-      <h2 className={hero.primaryAttribute}>{hero.name}</h2>
+      <img className="avatar" src={hero.image} />
+      <div className="hero-label">
+        <img
+          className="attr"
+          src={`https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_${hero.primaryAttribute}.png`}
+        />
+        <h2>{hero.name}</h2>
+      </div>
     </li>
   )
 }

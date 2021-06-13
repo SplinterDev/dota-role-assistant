@@ -5,30 +5,30 @@
   overflow: hidden;
   height: 144px;
   box-shadow: 2px 2px 5px #222222;
+  transition: height 0.5s;
 
   img.avatar {
     height: 144px;
     width: 256px;
   }
 
-  // &:hover {
-  //   .hero-label {
-  //     bottom: 0px;
-  //   }
-  // }
-
-  .hero-label {
+  .hero-label,
+  .hero-details {
+    position: absolute;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     padding: 0 1rem;
     width: 256px;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+  }
+
+  .hero-label {
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     height: 60px;
-    position: absolute;
-    // bottom: -60px;
     bottom: 0px;
-    // transition: all 0.5s;
 
     img.attr {
       height: 30px;
@@ -38,11 +38,57 @@
     }
 
     h2 {
-      color: white;
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: 700;
       margin: 0 0 0 10px;
       line-height: 1;
+    }
+  }
+
+  .hero-details {
+    top: -84px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    height: 84px;
+    transition: top 0.5s;
+    padding: 0.5rem;
+    flex-direction: column;
+
+    .hero-complexity {
+      display: flex;
+      flex-direction: row;
+      width: 256px;
+      justify-content: space-evenly;
+
+      .complexity-indicator {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        border: 2px solid white;
+        top: 5px;
+
+        &.filled {
+          background: white;
+        }
+      }
+    }
+    .roles-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .roles-item {
+        padding: 0 0.3rem;
+      }
+    }
+  }
+
+  &:hover {
+    .hero-details {
+      top: 0px;
     }
   }
 }

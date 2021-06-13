@@ -18,14 +18,16 @@
     color: #768499;
   }
 
+  .option {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 0 0.1rem;
+  }
   .attr-filter {
     display: flex;
 
     img.attr {
-      height: 30px;
-      width: 30px;
-      cursor: pointer;
-      margin: 0 0.3rem;
       filter: grayscale(1);
 
       &.str {
@@ -35,6 +37,29 @@
       &.active {
         filter: grayscale(0);
         // background: #7f7f7f;
+      }
+    }
+  }
+
+  .compl-filter {
+    display: flex;
+    .compl {
+      background: #acacac;
+      position: relative;
+
+      &.active {
+        background: #dedede;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 14px;
+        width: 14px;
+        left: 8px;
+        top: 8px;
+        transform: rotate(45deg);
+        background: #111319;
       }
     }
   }

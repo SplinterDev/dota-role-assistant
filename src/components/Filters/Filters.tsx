@@ -6,6 +6,10 @@ const Filters = (): React.ReactElement => {
   const [agiFilter, setAgiFilter] = useState(false)
   const [intFilter, setIntFilter] = useState(false)
 
+  const [compl1, setCompl1] = useState(false)
+  const [compl2, setCompl2] = useState(false)
+  const [compl3, setCompl3] = useState(false)
+
   return (
     <div className="Filters">
       <h1>Filters heroes</h1>
@@ -15,23 +19,38 @@ const Filters = (): React.ReactElement => {
           onClick={() => {
             setStrFilter((curr) => !curr)
           }}
-          className={`attr str ${strFilter ? 'active' : ''}`}
+          className={`option attr str ${strFilter ? 'active' : ''}`}
           src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_strength.png"
         />
         <img
           onClick={() => {
             setAgiFilter((curr) => !curr)
           }}
-          className={`attr agi ${agiFilter ? 'active' : ''}`}
+          className={`option attr agi ${agiFilter ? 'active' : ''}`}
           src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_agility.png"
         />
         <img
           onClick={() => {
             setIntFilter((curr) => !curr)
           }}
-          className={`attr int ${intFilter ? 'active' : ''}`}
+          className={`option attr int ${intFilter ? 'active' : ''}`}
           src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_intelligence.png"
         />
+      </div>
+      <div className="compl-filter">
+        <h2>Complexity</h2>
+        <div
+          onClick={() => setCompl1((compl) => !compl)}
+          className={`option compl compl-1 ${compl1 ? 'active' : ''}`}
+        ></div>
+        <div
+          onClick={() => setCompl2((compl) => !compl)}
+          className={`option compl compl-2 ${compl2 ? 'active' : ''}`}
+        ></div>
+        <div
+          onClick={() => setCompl3((compl) => !compl)}
+          className={`option compl compl-3 ${compl3 ? 'active' : ''}`}
+        ></div>
       </div>
     </div>
   )

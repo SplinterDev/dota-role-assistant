@@ -68,7 +68,15 @@ export const useHeroes = (): Hero[] => {
       for (let i = 0; i < allHeroes.length; i++) {
         promises.push(getHero(allHeroes[i].name))
       }
-      Promise.all(promises).then((hs) => setHeroes(hs))
+      Promise.all(promises).then((hs) =>
+        setHeroes(
+          hs.sort((hero1, hero2) => {
+            if (hero1.name > hero2.name) return 1
+            if (hero1.name < hero2.name) return -1
+            return 0
+          }),
+        ),
+      )
     }
     getHeroes()
   }, [])

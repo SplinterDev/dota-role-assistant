@@ -46,15 +46,20 @@ const HeroesList = ({ filters }: Props): React.ReactElement => {
         return true
       })
     }
-    return (
-      <ul className="HeroesList">
-        {filteredHeroes.map((hero) => (
-          <Hero key={hero.id} hero={hero} />
-        ))}
-      </ul>
-    )
+
+    if (filteredHeroes.length > 0) {
+      return (
+        <ul className="HeroesList">
+          {filteredHeroes.map((hero) => (
+            <Hero key={hero.id} hero={hero} />
+          ))}
+        </ul>
+      )
+    } else {
+      return <div className="loading">No Heroes match your filter</div>
+    }
   } else {
-    return <div>Loading...</div>
+    return <div className="loading">Loading...</div>
   }
 }
 

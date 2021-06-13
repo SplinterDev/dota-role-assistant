@@ -8,6 +8,17 @@ function App(): React.ReactElement {
   const [filters, setFilters] = useState<FiltersObject>({
     attribute: null,
     complexity: 0,
+    roles: {
+      Carry: 0,
+      Support: 0,
+      Nuker: 0,
+      Disabler: 0,
+      Jungler: 0,
+      Durable: 0,
+      Escape: 0,
+      Pusher: 0,
+      Initiator: 0,
+    },
   })
 
   return (

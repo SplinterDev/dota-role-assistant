@@ -24,9 +24,12 @@
     cursor: pointer;
     margin: 0 0.1rem;
   }
-  .attr-filter {
+  .attr-filter,
+  .compl-filter,
+  .role-filter {
     display: flex;
-
+  }
+  .attr-filter {
     img.attr {
       filter: grayscale(1);
 
@@ -36,13 +39,11 @@
 
       &.active {
         filter: grayscale(0);
-        // background: #7f7f7f;
       }
     }
   }
 
   .compl-filter {
-    display: flex;
     .compl {
       background: #acacac;
       position: relative;
@@ -60,6 +61,23 @@
         top: 8px;
         transform: rotate(45deg);
         background: #111319;
+      }
+    }
+  }
+
+  .role-filter {
+    .role-options {
+      display: flex;
+      flex-wrap: wrap;
+
+      .text-option {
+        padding: 0 0.5rem;
+        color: #acacac;
+        cursor: pointer;
+
+        &.active {
+          color: white;
+        }
       }
     }
   }

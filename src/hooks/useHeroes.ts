@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import allHeroes from '../data/allHeroes.json'
 
 export type Attribute = 'strength' | 'agility' | 'intelligence'
-type Roles = {
+export type Roles = {
   Carry: number
   Support: number
   Nuker: number

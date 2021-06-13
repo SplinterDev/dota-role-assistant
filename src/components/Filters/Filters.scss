@@ -1,0 +1,41 @@
+.Filters {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  padding: 1rem;
+
+  h1,
+  h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+
+  h2 {
+    font-weight: 500;
+    color: #768499;
+  }
+
+  .attr-filter {
+    display: flex;
+
+    img.attr {
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      margin: 0 0.3rem;
+      filter: grayscale(1);
+
+      &.str {
+        filter: grayscale(1) brightness(1.8);
+      }
+
+      &.active {
+        filter: grayscale(0);
+        // background: #7f7f7f;
+      }
+    }
+  }
+}

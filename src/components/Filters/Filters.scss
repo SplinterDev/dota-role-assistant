@@ -22,7 +22,7 @@
   }
 
   h2 {
-    margin: 0 1rem;
+    margin: 0 0.5rem 0 2rem;
     font-weight: 500;
     color: #768499;
     min-width: 90px;
@@ -90,5 +90,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 340px) {
+  .Filters {
+    flex-direction: column;
   }
 }

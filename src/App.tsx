@@ -25,6 +25,22 @@ function App(): React.ReactElement {
     <div className="App">
       <Filters onChange={(filters) => setFilters(filters)} />
       <HeroesList filters={filters} />
+      <footer>
+        <p>
+          Created with React by{' '}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/SplinterDev/dota-role-assistant"
+          >
+            SplinterDev
+          </a>
+        </p>
+        <p>
+          Dota and the Dota logo are trademarks and/or registered trademarks of
+          Valve
+        </p>
+      </footer>
     </div>
   )
 }

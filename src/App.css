@@ -11,3 +11,26 @@ body,
   padding: 0 2rem;
   min-height: 100%;
 }
+
+@media (max-width: 370px) {
+  .App {
+    padding: 0;
+  }
+}
+
+footer {
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.8rem;
+  padding: 3rem 0 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}

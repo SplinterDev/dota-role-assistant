@@ -21,6 +21,9 @@ export type Hero = {
   attribute: Attribute
   complexity: number
   roles: Roles
+  /**
+   * @todo add attack range
+   */
 }
 
 const IMAGE_URL =
